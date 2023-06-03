@@ -7,19 +7,26 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* toma el porcentaje del font-size del browser (16px) y lo pasamos a 10px para trabajar con rems más fácil*/
 }
 
 body {
-    padding: 25px;
+    padding: 2.5rem;
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.7;
     color: #777;
+
+    box-sizing: border-box;
 }
 
 .bg-white {
@@ -37,12 +44,12 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 25px;
-    left: 20px;
+    top: 2.5rem;
+    left: 2rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .text-box {
@@ -56,7 +63,7 @@ body {
 .heading-primary {
     color: white;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 
     /*Cuando hay problemas con las animaciones, shakes inesperados*/
     backface-visibility: hidden;
@@ -64,17 +71,17 @@ body {
 
 .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 700;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     animation: moveInLeft 1s ease-in;
 }
 
 .heading-primary-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 400;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-in;
 }
 
@@ -93,14 +100,15 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color: #777;
-    padding: 15px 40px;
-    border-radius: 100px;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
     position: relative;
     transition: .5s;
+    font-size: 1.6rem;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-0.5rem);
     box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -110,8 +118,8 @@ body {
 }
 
 .btn:active {
-    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
-    transform: translateY(-1px);
+    box-shadow: 0.1rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.1rem);
 }
 
 .btn::after {
@@ -119,7 +127,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     background-color: white;
     position: absolute;
     top: 0;
@@ -130,7 +138,7 @@ body {
 
 @keyframes moveInDown {
     0% {
-        transform: translateY(50px);
+        transform: translateY(5rem);
         opacity: 0;
     }
 
@@ -142,7 +150,7 @@ body {
 
 @keyframes moveInLeft {
     0% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
         opacity: 0;
     }
 
@@ -154,7 +162,7 @@ body {
 
 @keyframes moveInRight {
     0% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
         opacity: 0;
     }
 
