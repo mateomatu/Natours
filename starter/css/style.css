@@ -89,7 +89,7 @@ body {
     background: white   ;
 }
 
-.btn {
+.btn-animation {
     animation: moveInDown 1s ease-in .75s;
     animation-fill-mode: backwards;
 }
